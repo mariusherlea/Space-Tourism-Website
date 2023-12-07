@@ -104,5 +104,29 @@
       },
       "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
     }
-  ]
+  ],
+  "navData": [
+    {
+      "text": "00 Home",
+      "url": "/"
+    },
+    {
+      "text": "01 Destination",
+      "url": "/destination"
+    },
+    {
+      "text": "02 Crew",
+      "url": "/crew"
+    },
+    {
+      "text": "03 Technology",
+      "url": "/technology"
+    }
+  ],
+  "home": {
+    "upHeader": "So, you want to travel to",
+    "header": "Space",
+    "paragraph": "Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!",
+    "exploreBtn": "Explore"
+  }
 }
