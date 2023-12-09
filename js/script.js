@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 body.textContent = "";
 
-async function fetchData() {
+export async function fetchData() {
   try {
     const response = await fetch("../data/data.json");
     const data = await response.json();
@@ -11,7 +11,7 @@ async function fetchData() {
   }
 }
 // fetchData();
-function addLinkItem(text, url, parent) {
+export function addLinkItem(text, url, parent) {
   const liElement = document.createElement("li");
   const linkElement = document.createElement("a");
   linkElement.setAttribute("href", url);
@@ -20,7 +20,7 @@ function addLinkItem(text, url, parent) {
   parent.appendChild(liElement);
 }
 
-function addElementToPage(parent, element, content) {
+export function addElementToPage(parent, element, content) {
   element = document.createElement(element);
   element.textContent = content;
   parent.appendChild(element);
