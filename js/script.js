@@ -39,16 +39,6 @@ async function initializarePagina() {
       addLinkItem(element.text, element.url, ulElement);
     });
 
-    //creare div parinte care sa cuprinda: h5,h1,p,button + textContent
-    // const header = document.createElement("h1");
-    // const exploreBtn = document.createElement("button");
-
-    // header.textContent = date.home.header;
-    // exploreBtn.textContent = date.home.exploreBtn;
-
-    // body.appendChild(exploreBtn);
-    // body.appendChild(header);
-
     addElementToPage(body, "h1", date.home.header);
     addElementToPage(body, "h5", date.home.upHeader);
     addElementToPage(body, "p", date.home.paragraph);
@@ -57,6 +47,3 @@ async function initializarePagina() {
 }
 
 initializarePagina();
-// navData.forEach((element) => {
-//   addLinkItem(element.text, element.url, ulElement);
-// });

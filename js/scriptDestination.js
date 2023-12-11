@@ -1,22 +1,11 @@
 const body = document.querySelector("body");
 body.textContent = "";
 
-import { fetchData } from "./script";
+import { fetchData } from "./script.js";
+import { addLinkItem } from "./script.js";
+import { addElementToPage } from "./script.js";
 
 // fetchData();
-function addLinkItem(text, url, parent) {
-  const liElement = document.createElement("li");
-  const linkElement = document.createElement("a");
-  linkElement.setAttribute("href", url);
-  linkElement.textContent = text;
-  liElement.appendChild(linkElement);
-  parent.appendChild(liElement);
-}
-function addElementToPage(parent, element, content) {
-  element = document.createElement(element);
-  element.textContent = content;
-  parent.appendChild(element);
-}
 
 function addImgToPage(content) {
   const img = document.createElement("img");
