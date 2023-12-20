@@ -25,8 +25,7 @@ export function addElementToPage(parent, element, content) {
   element.textContent = content;
   parent.appendChild(element);
 }
-
-async function initializarePagina() {
+async function nav() {
   const date = await fetchData();
   console.log(date);
   if (date) {
@@ -38,12 +37,23 @@ async function initializarePagina() {
     date.navData.forEach((element) => {
       addLinkItem(element.text, element.url, ulElement);
     });
+  }
+}
 
+async function content() {
+  const date = await fetchData();
+  console.log(date);
+  if (date) {
     addElementToPage(body, "h1", date.home.header);
     addElementToPage(body, "h5", date.home.upHeader);
     addElementToPage(body, "p", date.home.paragraph);
     addElementToPage(body, "button", date.home.exploreBtn);
   }
+}
+async function initializarePagina() {
+  nav();
+
+  content();
 }
 
 initializarePagina();

@@ -30,7 +30,8 @@
       },
       "description": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
       "distance": "628 mil. km",
-      "travel": "3 years"
+      "travel": "3 years",
+      "url": "/europa.html"
     },
     {
       "name": "Titan",
@@ -40,7 +41,8 @@
       },
       "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
       "distance": "1.6 bil. km",
-      "travel": "7 years"
+      "travel": "7 years",
+      "url": "/titan.html"
     }
   ],
   "crew": [
