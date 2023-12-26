@@ -10,7 +10,10 @@ export async function fetchData() {
     console.log("Fetch data.json error", error);
   }
 }
-// fetchData();
+
+const date2 = await fetchData();
+console.log(date2);
+
 export function addLinkItem(text, url, parent) {
   const liElement = document.createElement("li");
   const linkElement = document.createElement("a");
@@ -20,16 +23,14 @@ export function addLinkItem(text, url, parent) {
   parent.appendChild(liElement);
 }
 
-export async function nav() {
-  const date = await fetchData();
-  console.log(date);
-  if (date) {
+export function nav() {
+  if (date2) {
     const navElement = document.createElement("nav");
     const ulElement = document.createElement("ul");
 
     body.appendChild(navElement);
     navElement.appendChild(ulElement);
-    date.navData.forEach((element) => {
+    date2.navData.forEach((element) => {
       addLinkItem(element.text, element.url, ulElement);
     });
   }
@@ -41,9 +42,8 @@ export function addElementToPage(parent, element, content) {
   element.textContent = content;
   parent.appendChild(element);
 }
-const date = await fetchData();
 
-addElementToPage(body, "h1", date.home.header);
-addElementToPage(body, "h5", date.home.upHeader);
-addElementToPage(body, "p", date.home.paragraph);
-addElementToPage(body, "button", date.home.exploreBtn);
+addElementToPage(body, "h1", date2.home.header);
+addElementToPage(body, "h5", date2.home.upHeader);
+addElementToPage(body, "p", date2.home.paragraph);
+addElementToPage(body, "button", date2.home.exploreBtn);
