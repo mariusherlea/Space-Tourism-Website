@@ -13,17 +13,16 @@ function addImgToPage(parent, element, content) {
 
 const body = document.querySelector("body");
 
-export function content(number) {
+export function contentCrew(number) {
   body.textContent = "";
   nav();
   navDestination();
 
   if (date2) {
-    addElementToPage(body, "h1", date2.destinations[number].name);
-    addElementToPage(body, "h5", date2.destinations[number].travel);
-    addElementToPage(body, "h3", date2.destinations[number].distance);
-    addElementToPage(body, "p", date2.destinations[number].description);
-    addImgToPage(body, "img", date2.destinations[number].images.png);
+    addElementToPage(body, "h1", date2.crew[number].name);
+    addElementToPage(body, "h5", date2.crew[number].role);
+    addElementToPage(body, "p", date2.crew[number].bio);
+    addImgToPage(body, "img", date2.crew[number].images.png);
   }
 }
 
@@ -34,9 +33,9 @@ export function navDestination() {
 
     body.appendChild(navElement);
     navElement.appendChild(ulElement);
-    date2.destinations.forEach((element) => {
+    date2.crew.forEach((element) => {
       addLinkItem(element.name, element.url, ulElement);
     });
   }
 }
-content(0);
+contentCrew(0);
