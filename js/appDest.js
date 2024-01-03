@@ -2,6 +2,7 @@ import { nav } from "./app.js";
 import { fetchData } from "./app.js";
 import { addElementToPage } from "./app.js";
 import { addLinkItem } from "./app.js";
+import { styleNav } from "./app.js";
 
 const date2 = await fetchData();
 
@@ -37,6 +38,7 @@ export function navDestination() {
     date2.destinations.forEach((element) => {
       addLinkItem(element.name, element.url, ulElement);
     });
+    styleNav(ulElement);
   }
 }
 content(0);

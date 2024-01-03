@@ -1,5 +1,8 @@
 const body = document.querySelector("body");
 body.textContent = "";
+body.style.backgroundImage =
+  'url("../assets/home/background-home-desktop.jpg")';
+body.style.backgroundRepeat = "no-repeat";
 
 export async function fetchData() {
   try {
@@ -23,6 +26,14 @@ export function addLinkItem(text, url, parent) {
   parent.appendChild(liElement);
 }
 
+export function styleNav(element) {
+  element.style.display = "flex";
+  element.style.color = "#FFFFFF0A";
+  element.style.width = "830px";
+  element.style.background = "rgba(255, 255, 255, 0.04)";
+  element.style.backdropFilter = "blur(40.774227142333984px)";
+}
+
 export function nav() {
   if (date2) {
     const navElement = document.createElement("nav");
@@ -33,6 +44,7 @@ export function nav() {
     date2.navData.forEach((element) => {
       addLinkItem(element.text, element.url, ulElement);
     });
+    styleNav(ulElement);
   }
 }
 nav();

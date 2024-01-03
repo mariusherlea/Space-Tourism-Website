@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-bellefair: Bellefair;
+  --font-barlow-condensed: "Barlow Condensed";
+  --font-barlow: Barlow;
+
+  /* font sizes */
+  --font-size-base: 16px;
+
+  /* Colors */
+  --color-gray-100: #0b0d17;
+  --color-white: #fff;
+  --color-lavender: #d0d6f9;
+}

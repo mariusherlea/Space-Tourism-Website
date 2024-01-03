@@ -1,4 +1,4 @@
-import { nav } from "./app.js";
+import { nav, styleNav } from "./app.js";
 import { fetchData } from "./app.js";
 import { addElementToPage } from "./app.js";
 import { addLinkItem } from "./app.js";
@@ -36,6 +36,7 @@ export function navDestination() {
     date2.crew.forEach((element) => {
       addLinkItem(element.name, element.url, ulElement);
     });
+    styleNav(ulElement);
   }
 }
 contentCrew(0);
